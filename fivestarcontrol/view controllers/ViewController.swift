@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let fiveStarControl = FiveStarRating(frame: CGRect(x: (Int(UIScreen.main.bounds.width) - Int((5*Int(kStarSize))+(4*kSpacing)))/2, y: 100, width: Int((5*Int(kStarSize)) + (4*kSpacing)), height: Int(kStarSize)))
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        view.backgroundColor = .white
+        
+        view.addSubview(fiveStarControl)
     }
 
     override func didReceiveMemoryWarning() {
